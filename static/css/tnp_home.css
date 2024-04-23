@@ -1,0 +1,317 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  flex-shrink: inherit;
+  background-image: url('images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  background-color: #5383a596;
+  position: fixed;
+}
+
+.company-logo {
+  width: 10%;
+  height: 1%;
+}
+
+.company-name h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+/* Sliding window */
+.sliding-window {
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+
+  display: flex;
+  width: calc(100% * 3);
+
+  /* adjust 3 to match the number of slides */
+  transition: transform 0.4s ease-in-out;
+}
+
+.slides img {
+  flex-shrink: 0;
+  width: 400px;
+  height: 400px;
+  margin-right: 20px;
+  width: calc(100% / 3);
+
+  /* adjust 3 to match the number of slides */
+}
+
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+nav {
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 1;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.notification-symbol:hover .notification-dropdown {
+  display: block;
+}
+
+.notification-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-dropdown li {
+  margin-bottom: 10px;
+}
+
+.notification-dropdown a {
+  color: #333;
+  text-decoration: none;
+}
+
+.notification-dropdown a:hover {
+  text-decoration: underline;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider img {
+  max-width: 30%;
+  height: auto;
+  margin-right: 9px;
+}
+
+.about-section {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+form.inline input[type=search] {
+  padding: 10px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  height: 30px;
+  background: #f1f1f1;
+}
+
+form.inline button {
+  float: left;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  width: 15%;
+  height: 20%;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.inline button:hover {
+  background: #0b7dda;
+}
+
+form.inline::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.item active {
+  border: 5px solid;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+select {
+  align-items: center;
+  width: 40%y;
+}
+
+.navbar {
+  opacity: 0.8;
+  margin-bottom: 0;
+  background-color: #fff;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar .navbar-nav li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2E1C05;
+  transition: all 0.2s ease-out;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  transition: all 0.2s ease-out;
+  color: rgba(200, 100, 0, 0.8);
+}
+
+.navbar-scroll {
+  opacity: 1;
+}
+
+#top-social-menu {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar-nav>li>a {
+    padding: 0;
+    margin-top: 35px;
+    margin-left: 50px;
+    line-height: 70px;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    padding: 0;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  #top-social-menu {
+    display: initial;
+  }
+
+  /* Navbar when scrolled */
+
+  .navbar-scroll {
+    height: 70px;
+  }
+
+  .navbar-scroll #top-social-menu {
+    display: none;
+    transition: all 0.2s ease-out;
+  }
+
+  .navbar-scroll .navbar-brand {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .navbar-scroll .navbar-nav>li>a {
+    opacity: 1;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-nav>li>a::after {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #2E1C05;
+    content: '';
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    transform: translateY(-10px);
+  }
+
+  .navbar-nav>li>a:hover::after,
+  .navbar-nav>li>a:focus::after {
+    height: 2px;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+a:hover {
+  text-decoration: none;
+  color: #543A1A;
+}
+
+/* Navbar */
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}

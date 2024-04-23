@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/sign_up.css')}}">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+
+<body>
+  <form name="sentMessage" id="contactForm" action="/signup" method="post">
+    <div class="signup-form">
+      <div class="container">
+        <div class="header">
+          <h1>Create an Account</h1>
+          <p>Get started for free!</p>
+        </div>
+        <select id="acc" name="acc">
+          <option value="">Select an option</option>
+          <option value="">As A Student</option>
+          <option value="">As A Company</option>
+          <option value="">As A Institute</option>
+        </select><br><br>
+        <div class="input">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username" name="username" placeholder="Username/Email" required />
+        </div>
+        <div class="input">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" name="password" placeholder="Password" required />
+        </div>
+        <!-- <input class="signup-btn" type="submit" value="SIGN UP" /> -->
+        <a class="signup-btn" href="{{url_for('login')}}"><button type="submit" class="signup-btn">Signup</button></a>
+
+        <!--  <p>Already have an account <a href="#">sign in</a></p>-->
+      </div>
+    </div>
+  </form>
+  <py-script>
+
+
+  </py-script>|
+</body>
+
+</html>

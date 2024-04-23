@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>PlacementCell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--    <link rel="stylesheet" href="HomePage.css">-->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/HomePage.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="login" method="">
+        <nav class="navbar">
+            <div class="navbar-brand">Campus Placement System</div>
+            <ul class="navbar-menu">
+                <!--   <li><a href="#">Home</a></li>-->
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{{url_for('login')}}"> <button>Login/Signup</button></a> </li>            </ul>
+        </nav>
+    </form>
+
+    <!-- Sliding window -->
+    <div class="sliding-window">
+        <div class="slides">
+            <img src="images/ceo-image.png" alt="Slide 1">
+            <img src="images/company-logo.png" alt="Slide 2">
+            <img src="images/hr-image.jpg" alt="Slide 3">
+        </div>
+        <button class="prev-btn">&#8249;</button>
+        <button class="next-btn">&#8250;</button>
+    </div>
+
+    <div class="below">
+        <h1>Campus Placement System</h1>
+
+    </div>
+
+    <!-- Features -->
+
+    <section id="features">
+        <div class="row">
+
+            <div class="feature-box col-lg-4">
+                <i class="icon fas fa-check-circle fa-4x"></i>
+                <h3>Easy to use.</h3>
+                <p>Easy to use and user-friendly</p>
+            </div>
+
+
+            <div class="feature-box col-lg-4">
+                <i class="icon fas fa-solid fa-users-viewfinder fa-4x"></i>
+                <h3>Get best Company.</h3>
+                <p>Prepare for best and get the best.</p>
+            </div>
+
+
+            <div class="feature-box col-lg-4">
+                <i class="icon fas fa-heart fa-4x"></i>
+                <h3>Guaranteed to work.</h3>
+                <p>Everyone will get to work with the best.</p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+    <!--    <script type="text/javascript" src="HomePage.js"></script> -->
+    <script type="text/javascript" src="{{url_for('static',filename='script/HomePage.js')}}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"></script>
+
+
+
+
+
+</body>
+
+</html>

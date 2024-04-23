@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Campus Placement System</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+</head>
+
+<body>
+  <div class="background"> &nbsp; </div>
+
+  <nav class="navbar navbar-inverse navbar-custom">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand navbar-custom3" href="#">Campus Placement System</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="aCustom" href="admin_home.html">Admin Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="aCustom" onClick="logOut()" href="logout.html"><button><span
+                  class="glyphicon glyphicon-log-out"></span> LogOut</button></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="disp">
+    <div id="studPro" style="text-align: center; display: block" class="col-lg-12 col-sm-12 col-xs-12">
+      <h2 class="heading"> Students Information</h2>
+      <br>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+</body>
+
+</html>
